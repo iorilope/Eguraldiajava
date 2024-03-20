@@ -1,0 +1,88 @@
+{
+  "message": "accurate",
+  "cod": "200",
+  "count": 3,
+  "list": [
+    {
+      "id": 3108008,
+      "name": "Tolosa",
+      "coord": { "lat": 43.1348, "lon": -2.078 },
+      "main": {
+        "temp": 59.34,
+        "feels_like": 58.55,
+        "temp_min": 56.21,
+        "temp_max": 63.9,
+        "pressure": 1006,
+        "humidity": 76
+      },
+      "dt": 1710922539,
+      "wind": { "speed": 3.24, "deg": 180 },
+      "sys": { "country": "ES" },
+      "rain": null,
+      "snow": null,
+      "clouds": { "all": 100 },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "overcast clouds",
+          "icon": "04d"
+        }
+      ]
+    },
+    {
+      "id": 6358159,
+      "name": "Tolosa",
+      "coord": { "lat": 43.1078, "lon": -2.0801 },
+      "main": {
+        "temp": 57.31,
+        "feels_like": 56.55,
+        "temp_min": 53.96,
+        "temp_max": 61.86,
+        "pressure": 1006,
+        "humidity": 81
+      },
+      "dt": 1710922753,
+      "wind": { "speed": 3.71, "deg": 176 },
+      "sys": { "country": "ES" },
+      "rain": null,
+      "snow": null,
+      "clouds": { "all": 100 },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "overcast clouds",
+          "icon": "04d"
+        }
+      ]
+    },
+    {
+      "id": 2510400,
+      "name": "Tolosa",
+      "coord": { "lat": 39.2, "lon": -1.3667 },
+      "main": {
+        "temp": 54.68,
+        "feels_like": 53.8,
+        "temp_min": 54.68,
+        "temp_max": 54.68,
+        "pressure": 1011,
+        "humidity": 84
+      },
+      "dt": 1710922333,
+      "wind": { "speed": 5.01, "deg": 35 },
+      "sys": { "country": "ES" },
+      "rain": null,
+      "snow": null,
+      "clouds": { "all": 100 },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "overcast clouds",
+          "icon": "04d"
+        }
+      ]
+    }
+  ]
+}
