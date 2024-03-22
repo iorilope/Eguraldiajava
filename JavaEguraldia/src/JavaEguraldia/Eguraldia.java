@@ -7,10 +7,14 @@ package JavaEguraldia;
  * 
  * @author Ioritz Lopetegi
  */
-import com.fasterxml.jackson.databind.ObjectMapper; 
+import com.fasterxml.jackson.core.*;
+
+import java.util.ArrayList;
+
+import com.fasterxml.jackson.annotation.JsonProperty; 
 public class Eguraldia {
 	 
-	// import com.fasterxml.jackson.annotation.JsonProperty; 
+
 	/* ObjectMapper om = new ObjectMapper();
 	Root root = om.readValue(myJsonString, Root.class); */
 	public class Clouds{

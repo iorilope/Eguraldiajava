@@ -232,19 +232,4 @@ public class Interfazea extends JFrame {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
