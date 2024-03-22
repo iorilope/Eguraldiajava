@@ -5,14 +5,20 @@
 package JavaEguraldia;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.LayoutManager;
 import java.awt.event.KeyListener;
 import java.awt.event.WindowListener;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.swing.JComponent;
 import javax.swing.JFrame;
+import javax.swing.*;
 
 
 
@@ -50,6 +56,7 @@ public class Interfazea extends JFrame {
 	/** Interfazearen posizioa Y. */
 	private Integer InterfPosY;
 
+
 	/**
 	 * Interfaze berria sortu eta hasieratzen du.
 	 *
@@ -68,11 +75,19 @@ public class Interfazea extends JFrame {
 		this.InterfZabalera = zabalera;
 		this.InterfIkusi = ikusgarri;
 		this.Konponenteak = new ArrayList<>();
+		
 
 		this.initUI();
 
 	}
 	
+	/**
+	 * 
+	 */
+	public Interfazea() {
+		// TODO Auto-generated constructor stub
+	}
+
 	/**
 	 * @return Interfazearen titulua
 	 */
@@ -222,14 +237,107 @@ public class Interfazea extends JFrame {
 		}
 	
 	/**
-	 * Inerfazeari pack egiten dio.
+	 * Interfazeari pack egiten dio.
 	 */
 	public void pack() {
 		  super.pack();
 		}
+	public void HomeMenuSortu() {
+        Interfazea homeMenuInterfazea = new Interfazea("JavaEguraldia", "JavaEguraldia", 600, 1000, true);
+        
+        BorderLayout homemenuBorderLayout = new BorderLayout();
+        
+        homeMenuInterfazea.setLocationRelativeTo(null);
+        homeMenuInterfazea.setInterflayout(homemenuBorderLayout);
+        homeMenuInterfazea.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        
+        //Goiko panela 
+        JPanel GoikoPanela = new JPanel();
+        GoikoPanela.setLayout(new FlowLayout());
+        //GoikoPanela.setBackground(Color.blue);
+
+        // Konponenteak gehitu goiko panelean
+        JLabel ubikazioaJLabel = new JLabel("Ubikazioa: ");
+        GoikoPanela.add(ubikazioaJLabel);
+
+        JTextField ubikazioaTextField = new JTextField(20);
+        GoikoPanela.add(ubikazioaTextField);
+
+        JLabel DataorduLabel = new JLabel("Eguna eta ordua: ");
+        GoikoPanela.add(DataorduLabel);
+
+        JLabel DataorduTextField = new JLabel();
+        DataorduTextField.setText(new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(new Date()));
+        GoikoPanela.add(DataorduTextField);
+        GoikoPanela.setPreferredSize(new Dimension(600,50));
+       
+        homeMenuInterfazea.add(GoikoPanela, BorderLayout.SOUTH);
+        
+        
+        
+        
+        JPanel ErdikoPanela = new JPanel();
+        ErdikoPanela.setLayout(new BorderLayout());
+
+        //Erdiko Paneleko konponenteak gehitu
+        JLabel tenperaturaLabel = new JLabel("Tenperatura: ");
+        ErdikoPanela.add(tenperaturaLabel, BorderLayout.NORTH);
+
+        JLabel tenperaturaTextField = new JLabel();
+        tenperaturaTextField.setText("20°C");
+        ErdikoPanela.add(tenperaturaTextField, BorderLayout.CENTER);
+
+        JLabel BaldintzaMeteorologikoakLabel = new JLabel("Baldintza Meteorologikoak: ");
+        ErdikoPanela.add(BaldintzaMeteorologikoakLabel, BorderLayout.SOUTH);
+
+        JLabel BaldintzaMeteorologikoakTextField = new JLabel();
+        BaldintzaMeteorologikoakTextField.setText("Eguzkitsua");
+        ErdikoPanela.add(BaldintzaMeteorologikoakTextField, BorderLayout.SOUTH);
+
+        ImageIcon KlimaIrudia = new ImageIcon("C:\\Users\\1ag3.iorilope\\Downloads\\weather-forecast.png"); // irudia
+        JLabel KlimaIrudiaLabel = new JLabel(KlimaIrudia);
+        ErdikoPanela.add(KlimaIrudiaLabel, BorderLayout.EAST);
+
+       
+        
+        homeMenuInterfazea.add(ErdikoPanela, BorderLayout.EAST);
+        
+        
+        
+        
+        
+        
+        
+        
+        homeMenuInterfazea.pack();
+        
+    }
+	
+	
+	
+
+	   
+
+	    private static JPanel crearPanelInferior() {
+	        JPanel panelInferior = new JPanel();
+	        panelInferior.setLayout(new FlowLayout());
+
+	        // Añadir componentes al panel inferior
+	        JLabel pronosticoLabel = new JLabel("Pronóstico: ");
+	        panelInferior.add(pronosticoLabel);
+
+	        JComboBox pronosticoComboBox = new JComboBox();
+	        pronosticoComboBox.addItem("Hoy");
+	        pronosticoComboBox.addItem("Mañana");
+	        pronosticoComboBox.addItem("Próximos 7 días");
+	        panelInferior.add(pronosticoComboBox);
+
+	        return panelInferior;
+	    }
+	}
 	
 	
 	
 	
-	
-}
+
